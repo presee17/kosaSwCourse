@@ -97,36 +97,12 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
-		
-		<!-- Connection Pool -->
-		<dependency>
-   		 	<groupId>c3p0</groupId>
-  		  	<artifactId>c3p0</artifactId>
-    		<version>0.9.1.2</version>
-		</dependency>
-		
-		<!-- Mysql JDBC Driver -->
-		<dependency>
-    		<groupId>mysql</groupId>
-    		<artifactId>mysql-connector-java</artifactId>
-    		<version>5.1.36</version>
-		</dependency>
-		
-		<!-- Spring JDBC 스프링에서 지원하는 JDBC라이브러리 -->
-		<dependency>
-    		<groupId>org.springframework</groupId>
-    		<artifactId>spring-jdbc</artifactId>
-    		<version>4.2.0.RELEASE</version>
-		</dependency>
-		
-		
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>jsp-api</artifactId>
 			<version>2.1</version>
 			<scope>provided</scope>
 		</dependency>
-		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -139,7 +115,29 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency> 
+		
+		<!-- MySQL JDBC Driver  -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.36</version>
+		</dependency>   
+		
+		<!-- Connection Pool -->
+		<dependency>
+		    <groupId>c3p0</groupId>
+		    <artifactId>c3p0</artifactId>
+		    <version>0.9.1.2</version>
+		</dependency>    
+		
+		<!-- Spring JDBC Support Library -->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-jdbc</artifactId>
+   			<version>${org.springframework-version}</version> 
+		</dependency>
+		
 	</dependencies>
     <build>
         <plugins>
