@@ -15,4 +15,5 @@ public class HomeController {
 		logger.info("HomeController-home()");
 		return "home";
 	}
+	
 }
