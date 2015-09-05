@@ -7,10 +7,6 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<style type="text/css">
-			a{
-			color: white;
-			}
-			
 			body {
 				color: white;
 			}
@@ -50,38 +46,12 @@
 				background-color: lightgray;
 			}
 			
-			#pager {
-				margin-top: 5px;
-				text-align: center;
-				font-size: small;
-			}
-			
-			#pager a {
-				text-decoration: none;
-				color: white;
-			}
-			
-			#pager a:hover {
-				color: orange;
-			}
-			
-			#pager a.pageNo {
+			#pager a.pagaNo {
 				margin-left: 5px;
 				margin-right: 5px;
 			}
 			
-			#pager a.pageNo.selected {
-				color: aqua;
-			}
 			
-			.title{
-			text-decoration: none;
-			color: white;
-			}			
-			
-			.title:hover {
-			color:orange;
-			}
 		</style>
 	</head>
 	
@@ -91,24 +61,23 @@
 		<table>
 			<tr>
 				<th style="width:50px">번호</th>
-				<th>제목</th>
-				<th style="width:60px">글쓴이</th>
-				<th style="width:80px">날짜</th>
-				<th style="width:60px">조회수</th>
+				<th>이름</th>
+				<th style="width:60px">가격</th>
+				<th style="width:80px">재고</th>
 			</tr>
 			
-			<c:forEach var="board" items="${list}">
+			<c:forEach var="product" items="${list}">
 				<tr>
-					<td>${board.no}</td>
-					<td><a href ="detail?boardNo=${board.no}">${board.title}</a></td>
-					<td>${board.writer}</td>
-					<td>${board.date}</td>
-					<td>${board.hitcount}</td>
+					<td>${product.no}</td>
+					<td><a href = "detail?productNo=${product.no}">${product.name}</a></td>
+					<td>${product.price}</td>
+					<td>${product.stock}</td>
 				</tr>
 			</c:forEach>
+			
 		</table>
 		
-		<div id="pager">
+	<div id="pager">
 			<a href="list?pageNo=1">[처음]</a>
 			
 			<c:if test="${groupNo>1}">
@@ -124,18 +93,10 @@
 			</c:if>
 			
 			<a href="list?pageNo=${totalPageNo}">[맨끝]</a>
-		</div>		
+		</div>
 		
 		<div id="buttonGroup">
-			<a href="writeForm">글쓰기</a>
+			<a href="writeForm">상품등록</a>
 		</div>
 	</body>
 </html>
-
-
-
-
-
-
-
-
